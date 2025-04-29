@@ -1,15 +1,11 @@
 pipeline {
     agent any
+
     stages {
         stage('Hello') {
             steps {
                 echo 'Hello World'
-            }
-        }
-        stage('Dev') {
-            steps {
-                git 'https://github.com/awstrainersz/test-demogit'
-                echo 'content of my file is'
+                git 'https://github.com/sunishgopinath/git1demo.git'
                 sh 'cat file1.txt'
             }
         }
